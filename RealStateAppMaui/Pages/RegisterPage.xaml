@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealStateAppMaui.Pages.RegisterPage"
+             Title="RegisterPage">
+    <VerticalStackLayout VerticalOptions="Center"
+                         Margin="20,0,20,0"
+                         Spacing="20">
+        <Image Source="dotnet_bot.svg"
+               WidthRequest="80"
+               HeightRequest="80"
+               HorizontalOptions="Center"></Image>
+        <Label Text="Create a new account"
+               TextColor="Black"
+               FontSize="Large" HorizontalOptions="Center"></Label>
+        <Label Text="Please enter your information below to create a new account for using the app."
+               TextColor="LightSlateGray"
+               FontSize="Small" HorizontalOptions="Center"></Label>
+        <Entry x:Name="entName" Placeholder="Enter Name"></Entry>
+        <Entry x:Name="entEmail" Placeholder="Enter Email"></Entry>
+        <Entry x:Name="entPhone" Placeholder="Enter Phone"></Entry>
+        <Entry x:Name="entPassword" Placeholder="Enter Password" IsPassword="True"></Entry>
+        <Button x:Name="btnRegister" Text="Register Now" HeightRequest="50"
+           FontSize="Medium"
+                BackgroundColor="#1d94ab"></Button>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label Text="Already have an account?"
+                  FontSize="Medium"
+                   TextColor="#101010"></Label>
+            <Label Text="Sign In"
+                  FontSize="Medium"
+                   TextColor="#1d94ab"></Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
