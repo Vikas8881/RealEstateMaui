@@ -7,8 +7,15 @@ namespace RealStateAppMaui
         public App()
         {
             InitializeComponent();
-
-            MainPage = new RegisterPage();
+            var accessToken= Preferences.Get("accessToken", string.Empty);
+            if(string.IsNullOrEmpty(accessToken))
+            {
+                MainPage=new RegisterPage();
+            }
+            else
+            {
+                MainPage=new CustomTabPage();
+            }
         }
     }
 }

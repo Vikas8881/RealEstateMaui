@@ -3,7 +3,9 @@ using Android.Runtime;
 
 namespace RealStateAppMaui
 {
-    [Application]
+    //For HTTP
+    [Application(UsesCleartextTraffic = true)]
+    //[Application]
     public class MainApplication : MauiApplication
     {
         public MainApplication(IntPtr handle, JniHandleOwnership ownership)

@@ -22,7 +22,8 @@
         <Entry x:Name="entPassword" Placeholder="Enter Password" IsPassword="True"></Entry>
         <Button x:Name="btnRegister" Text="Register Now" HeightRequest="50"
            FontSize="Medium"
-                BackgroundColor="#1d94ab"></Button>
+                BackgroundColor="#1d94ab"
+                 Clicked="btnRegister_Clicked"></Button>
 
         <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
             <Label Text="Already have an account?"
@@ -31,6 +32,9 @@
             <Label Text="Sign In"
                   FontSize="Medium"
                    TextColor="#1d94ab"></Label>
+            <HorizontalStackLayout.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapLogin" Tapped="TapLogin_Tapped"></TapGestureRecognizer>
+            </HorizontalStackLayout.GestureRecognizers>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
